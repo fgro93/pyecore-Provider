@@ -1,0 +1,24 @@
+Model:
+	'A Type:' type=Type
+	'A Reference:' reference=TypeReference
+	'A Problem:' problem=ProblemRule;
+
+
+
+ProblemRule:
+	'problem'
+	ref=[TypeReference]
+	val=[Type];
+
+TypeReference:
+	predefined=BasicType | derived=[Type];
+
+BasicType:
+	Boolean = /Boolean(?=\W)/ |
+	String = /String(?=\W)/ |
+	Integer = /Integer(?=\W)/ ;
+
+Type: StructType | TypeDefinition;
+
+StructType: name = 'struct' '{' 'field' '}';
+TypeDefinition: name = 'typedefinition' 'type';
