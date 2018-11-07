@@ -14,9 +14,9 @@ TypeReference:
 	predefined=BasicType | derived=[Type];
 
 BasicType:
-	Boolean = /Boolean(?=\W)/ |
-	String = /String(?=\W)/ |
-	Integer = /Integer(?=\W)/ ;
+	/Boolean(?=\W)/ |
+	/String(?=\W)/ |
+	/Integer(?=\W)/ ;
 
 Type: StructType | TypeDefinition;
 

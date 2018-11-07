@@ -1,3 +1,3 @@
 A Type: struct { field }
-A Reference: struct
+A Reference: Boolean
 A Problem: problem typedefinition struct
